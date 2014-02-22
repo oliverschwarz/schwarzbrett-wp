@@ -1,8 +1,14 @@
 {
   "name": "schwarzbrett-wp",
   "version": "0.0.1",
-  "description": "A simple wordpress theme for the schwarzbrett.de website",
+  "description": "A simple and lightweight wordpress theme for the website schwarzbrett.de",
   "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-sass": "~0.7.2",
+    "grunt-contrib-watch": "~0.5.3"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
