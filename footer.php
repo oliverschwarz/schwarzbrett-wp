@@ -7,7 +7,7 @@
  * @author     Oliver Schwarz <oliver@schwarzbrett.de>
  */
 
-?><footer></footer>
+?><footer role="contentinfo"></footer>
 
 <?php wp_footer(); ?>
 

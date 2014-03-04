@@ -15,7 +15,7 @@
 <?php if (is_single()): ?>
     <header>
         <h1><?php the_title(); ?></h1>
-        <div class="meta"><?php the_author(); ?> in <?php the_category(', '); ?> on <time datetime="<?php the_time('c'); ?>" pubdate><?php the_time('d M Y'); ?></time></div>
+        <div class="meta"><?php the_author(); ?> in <?php the_category(', '); ?> on <time datetime="<?php the_time('c'); ?>" pubdate><?php the_time('d.m.y'); ?></time></div>
     </header>
     <div class="article-content">
         <?php the_content(); ?>
@@ -33,7 +33,7 @@
         <?php the_excerpt(); ?>
     </div>
     <footer>
-        <div class="meta">In <?php the_category(', '); ?> on <time datetime="<?php the_time('c'); ?>" pubdate><?php the_time('d M Y'); ?></time></div>
+        <div class="meta">In <?php the_category(', '); ?> on <time datetime="<?php the_time('c'); ?>" pubdate><?php the_time('d.m.y'); ?></time></div>
     </footer>
 <?php endif; ?>
 </article>
