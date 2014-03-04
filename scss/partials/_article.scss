@@ -1,18 +1,14 @@
 article {
-  padding: 1em;
-  header {
-    line-height: 1.125;
-    h1 {
-      margin: 0;
-    }
-    a {
-      text-decoration: none;
-    }
+  padding: 1em 0;
+  header h1 {
+    font-size: 1.5em;
+    line-height: 1.25;
   }
-  .excerpt {
-    display: none;
+  header a {
+    text-decoration: none;
   }
   footer {
-    font-size: 80%;
+    color: #999;
+    font-size: .8em;
   }
 }

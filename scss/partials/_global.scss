@@ -3,15 +3,7 @@ html, body {
     background: $bg_colour;
     font: 100%/1.5 Arial, sans-serif;
     color: #333;
-}
-
-[role=banner] h1 {
-  margin: 0;
-}
-
-[role=banner] a {
-  color: #333;
-  text-decoration: none;
+    padding: 0 .5em;
 }
 
 .content {
