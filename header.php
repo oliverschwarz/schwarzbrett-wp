@@ -14,6 +14,9 @@
 <title><?php wp_title( '|', true, 'right' ); ?><?php echo bloginfo( 'name' ); ?></title>
 <?php wp_head(); ?>
 
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
   
 </head>
+<body>
+  
+  <h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
