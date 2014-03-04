@@ -24,7 +24,7 @@
     <header>
         <h1><a href="<?php the_permalink(); ?>" title="" rel="bookmark"><?php the_title(); ?></a></h1>
     </header>
-<?php if(has_post_thumbnail()): ?>
+<?php if (has_post_thumbnail()): ?>
     <div class="featured-image">
         <?php the_post_thumbnail(); ?>
     </div>
