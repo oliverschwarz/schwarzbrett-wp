@@ -1,11 +1,13 @@
 <?php
 
 /**
- * The header file for the Schwarzbrett theme
+ * The header file for the schwarzbrett-wp theme
  *
  * @package WordPress
  * @subpackage Schwarzbrett
+ * @author Oliver Schwarz <oliver@schwarzbrett.de>
  */
+
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -19,4 +21,6 @@
 </head>
 <body>
   
-  <h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
+  <header role="banner" class="content">
+    <h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
+  </header>

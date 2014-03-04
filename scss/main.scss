@@ -1,6 +1,22 @@
 // Main layout file (mobile first)
 html, body {
     background: $bg_colour;
-    font: 100%/1.7 Georgia, Times, serif;
+    font: 100%/1.5 Arial, serif;
     color: #333;
+}
+
+[role=banner] {
+  background: url(gfx/dark_wood.png);
+}
+[role=banner] h1 {
+  margin: 0;
+}
+[role=banner] a {
+  color: #333;
+  text-decoration: none;
+  text-shadow: 0 -1px 1px #000;
+}
+.content {
+  margin: 0 auto;
+  padding: 0 1em;
 }
