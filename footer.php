@@ -9,7 +9,7 @@
 
 ?>
 
-<footer role="contentinfo">
+<footer role="contentinfo" class="content">
   <p>Von uns f&uuml;r euch.</p>
 </footer>
 
