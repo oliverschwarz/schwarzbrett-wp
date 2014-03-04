@@ -3,9 +3,43 @@ html, body {
     background: $bg_colour;
     font: 100%/1.5 Arial, sans-serif;
     color: #333;
-    padding: 0 .5em;
+}
+
+a:link {
+  color: #444;
+}
+a:visited {
+  color: #999;
+}
+a:active {
+  color: #444;
 }
 
 .content {
   margin: 0 auto;
+  max-width: 90%;
+}
+.wp-caption {
+  max-width: 100%;
+}
+p.wp-caption-text {
+  font-size: .7em;
+  margin: 0;
+  padding: .25em;
+  text-transform: uppercase;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (min-width: 30em) {
+  html, body { font-size: 110%; }
+}
+@media (min-width: 45em) {
+  html, body { font-size: 120%; line-height: 1.7; }
+}
+@media (min-width: 60em) {
+  html, body { font-size: 130%; }
 }

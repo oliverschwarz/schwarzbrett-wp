@@ -11,4 +11,17 @@ article {
     color: #999;
     font-size: .8em;
   }
+  .excerpt {
+    display: none;
+  }
+  @media (min-width: 30em) {
+    .excerpt { display: block; }
+  }
+}
+
+.article-content {
+  ul {
+    margin: 0 1em;
+    padding: 0;
+  }
 }
