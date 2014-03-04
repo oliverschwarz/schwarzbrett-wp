@@ -1,6 +1,8 @@
-$bg_colour: #f2f2f2;
+// Base definitions
+@import 'partials/base';
 
-html {
-    background: $bg_colour;
-    font: 100%/1.7 Arial, sans-serif;
-}
+// Normalize
+@import "partials/normalize";
+
+// Load layout
+@import 'main';
