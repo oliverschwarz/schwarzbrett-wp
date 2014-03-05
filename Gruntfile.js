@@ -4,6 +4,8 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+    
+    // Setting up the wordpress tag
     tag: {
       banner:   '/*\n' +
                 'Theme name: <%= pkg.name %>\n' +
@@ -13,6 +15,8 @@ module.exports = function(grunt) {
                 'Description: <%= pkg.description %>\n' +
                 '*/\n'
     },
+    
+    // Build sass
     sass: {
       dev: {
         files: {
@@ -24,6 +28,8 @@ module.exports = function(grunt) {
         }
       }
     },
+    
+    // Watch for changes *then* build sass
     watch: {
       sass: {
         files: ['scss/**/*.scss'],
@@ -32,14 +38,41 @@ module.exports = function(grunt) {
           spawn: false
         }
       }
+    },
+    
+    // clean
+    clean: {
+      dist: {
+        src: ["~/schwarzbrett-wp/dist"]
+      },
+      options: {
+        "no-write": true,
+        "force": true
+      }
+    },
+
+    // rsync files
+    rsync: {
+      options: {
+        args: ["--verbose"],
+        exclude: [".git*","*.scss","node_modules", ".sass-cache", "scss", "Gruntfile.js", "package.json", "README.md"],
+        recursive: true
+      },
+      dist: {
+        options: {
+          src: "./",
+          dest: "<%= pkg.dest %>"
+        }
+      }
     }
+
   });
   
   // Load plugins
-  grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-contrib-watch');
+  require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
   
-  // Register task
-  grunt.registerTask('default',['watch']);
+    // Register task
+  grunt.registerTask('default', ['watch']);
+  grunt.registerTask('deploy', ['clean', 'rsync']);
   
 }
