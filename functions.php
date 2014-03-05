@@ -94,3 +94,41 @@ if (!function_exists('schwarzbrett_remove_recent_comments_style')) {
     }
     add_action('widgets_init', 'schwarzbrett_remove_recent_comments_style');
 }
+
+// PIWIK Analytics
+if (!function_exists('schwarzbrett_analytics')) {
+  
+  /**
+   * Add analytics to footer
+   */
+  function schwarzbrett_analytics()
+  {
+    if ($_SERVER['HTTP_HOST'] != 'schwarzbrett.de') {
+      return '';
+    }
+    if (!current_user_can('level_10')) {
+      $output .= <<<html
+<!-- Piwik -->
+<script type="text/javascript">
+var _paq = _paq || []; _paq.push(['trackPageView']); _paq.push(['enableLinkTracking']);
+(function() {
+var u=(("https:" == document.location.protocol) ? "https" : "http") + "://schwarzbrett.de/analytics/";
+_paq.push(['setTrackerUrl', u+'piwik.php']);
+_paq.push(['setSiteId', 1]);
+var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
+g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+})();
+</script>
+<noscript><p><img src="http://schwarzbrett.de/analytics/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
+html;
+            echo $output;
+    }
+  }
+
+  /**
+   * Add analytics to footer
+   */
+  add_action('wp_footer', 'schwarzbrett_analytics');
+  
+}
