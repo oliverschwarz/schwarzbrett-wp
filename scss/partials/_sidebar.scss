@@ -1,3 +1,24 @@
 #secondary div.content {
   border-top: .125em solid #666;
+  padding: 1em 0 2em 0;
+  .widget-title {
+    font-weight: normal;
+    font-size: .65em;
+    letter-spacing: .25em;
+    margin-top: 2em;
+    text-transform: uppercase;
+  }
+  aside {
+    @include clearfix;
+  }
+  aside ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  aside li {
+    float: left;
+    margin: 0 1em 0 0;
+    padding: 0;
+  }
 }
