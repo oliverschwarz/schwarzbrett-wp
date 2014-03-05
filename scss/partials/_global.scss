@@ -41,5 +41,5 @@ img {
   html, body { font-size: 120%; line-height: 1.7; }
 }
 @media (min-width: 60em) {
-  html, body { font-size: 130%; }
+  html, body { font-size: 130%; max-width: 62em; margin: 0 auto; }
 }
