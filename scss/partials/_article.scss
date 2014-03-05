@@ -21,8 +21,18 @@ article {
 }
 
 .article-content {
-  ul {
+  h2 {
+    font-weight: normal;
+    color: $main_colour;
+    line-height: 1.25;
+  }
+  ul, ol {
     margin: 0 1em;
+    padding: 0;
+  }
+  blockquote {
+    font-style: italic;
+    margin: 0;
     padding: 0;
   }
 }
