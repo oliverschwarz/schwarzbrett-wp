@@ -43,7 +43,7 @@ module.exports = function(grunt) {
     // clean
     clean: {
       dist: {
-        src: ["~/schwarzbrett-wp/dist"]
+        src: ["<%= pkg.dest %>"]
       },
       options: {
         "no-write": true,
@@ -55,7 +55,7 @@ module.exports = function(grunt) {
     rsync: {
       options: {
         args: ["--verbose"],
-        exclude: [".git*","*.scss","node_modules", ".sass-cache", "scss", "Gruntfile.js", "package.json", "README.md"],
+        exclude: [".git*","*.scss","node_modules", ".sass-cache", "scss", "Gruntfile.js", "package.json", "README.md", "dist"],
         recursive: true
       },
       dist: {
