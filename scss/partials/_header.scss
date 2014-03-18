@@ -1,10 +1,10 @@
 [role=banner] {
-  border-bottom: .125em solid #666;
+  border-bottom: .125em solid $contentborder;
   h1 {
     margin: .5em 0;
   }
   a {
-    color: #999;
+    color: rgb(194,125,56);
     text-decoration: none;
   }
 }

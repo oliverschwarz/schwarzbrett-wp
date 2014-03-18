@@ -1,15 +1,15 @@
 // Main layout file (mobile first)
 html, body {
-    background: $bg_colour;
-    font: 100%/1.5 Arial, sans-serif;
-    color: #333;
+    background: #fff;
+    font: 100%/1.5 sans-serif;
+    color: #000;
 }
 
 a:link {
-  color: #444;
+  color: #999;
 }
 a:visited {
-  color: #999;
+  color: rgb(121,142,135);
 }
 a:active {
   color: #444;

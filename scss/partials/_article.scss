@@ -1,3 +1,4 @@
+// Article CSS
 article {
   padding: 1em 0;
   header h1 {
@@ -20,8 +21,19 @@ article {
 }
 
 .article-content {
-  ul {
+  h2 {
+    font-weight: normal;
+    color: $main_colour;
+    line-height: 1.25;
+  }
+  ul, ol {
     margin: 0 1em;
     padding: 0;
+  }
+  blockquote {
+    background-color: #ddd;
+    font-style: italic;
+    margin: 0;
+    padding: .125em 1em;
   }
 }

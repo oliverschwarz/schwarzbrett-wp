@@ -10,15 +10,18 @@
   }
   aside {
     @include clearfix;
-  }
-  aside ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  aside li {
-    float: left;
-    margin: 0 1em 0 0;
-    padding: 0;
+    ul {
+      list-style: none;
+      margin: 0 0 1em 0;
+      padding: 0;
+    }
+    li {
+      float: left;
+      margin: 0 1em 0 0;
+      padding: 0;
+    }
+    a {
+      text-decoration: none;
+    }
   }
 }
